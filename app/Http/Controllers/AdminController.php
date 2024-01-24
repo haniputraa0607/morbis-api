@@ -10,7 +10,12 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
 
-    public function listQueue(Request $request)
+    public function __construct()
+    {
+        date_default_timezone_set('Asia/Jakarta');
+    }
+
+    public function listQueue(Request $request): mixed
     {
         $result = [];
         $queues = Queue::whereDate('created_at', date('Y-m-d'))->orderBy('no', 'asc')->get()->toArray();
