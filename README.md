@@ -26,3 +26,5 @@ php artisan serve
 
 Export Morbis.postman_collection.json sebagai collection di Postman
 Expost Lokal.postman_environment.json sebagai Environments di Postman
+
+Login Admin dengan email yang tersedia di data table users, menggunakan password '12345'
